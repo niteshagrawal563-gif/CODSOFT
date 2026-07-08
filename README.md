@@ -1,2 +1,2 @@
 # CODSOFT
-This is for some mini projects
+This is my first Git Repository.
