@@ -21,7 +21,9 @@ A comprehensive suite of five standalone, console-based C++ applications develop
 - [Software Engineering Patterns Applied](#software-engineering-patterns-applied)
 - [Prerequisites & Build Instructions](#prerequisites--build-instructions)
 - [Directory Layout](#directory-layout)
-- [Licensing & Author](#licensing--author)
+- [Author](#author)
+- [Internship](#internship)
+- [License](#license)
 
 ---
 
@@ -153,8 +155,8 @@ Run the compiled binaries directly from the terminal:
 
 ```text
 CODSOFT/
-├── calculator.cpp            # Task 2: Simple Calculator application source
 ├── numberGame.cpp            # Task 1: Number Guessing Game source
+├── calculator.cpp            # Task 2: Simple Calculator application source
 ├── ticTacToe.cpp             # Task 3: Tic-Tac-Toe Game source
 ├── todoList.cpp              # Task 4: To-Do List Dashboard source
 ├── librarySystem.cpp         # Task 5: Next-Gen Library Management System source
@@ -170,8 +172,18 @@ CODSOFT/
 
 ---
 
-## Licensing & Author
+## Author
 
-*   **Author**: Nitesh Agrawal
-*   **Organization**: CodSoft C++ Programming Internship
-*   **License**: Open-source MIT guidelines.
+*   **Nitesh Agrawal**
+
+---
+
+## Internship
+
+*   **CodSoft C++ Programming Internship**
+
+---
+
+## License
+
+*   **MIT License**

@@ -9,3 +9,5 @@ library_transactions.txt
 library_reservations.txt
 library_audit.log
 *.csv
+highscore.txt
+hiscore.txt
