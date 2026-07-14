@@ -184,6 +184,3 @@ CODSOFT/
 
 ---
 
-## License
-
-*   **MIT License**
