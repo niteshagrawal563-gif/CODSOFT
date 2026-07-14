@@ -11,6 +11,7 @@ Each project is independent and can be compiled and run from the terminal.
 | 1 | Number Guessing Game | `numberGame.cpp` | Guess a randomly generated number from 1 to 500. |
 | 2 | Simple Calculator | `calculator.cpp` | Perform arithmetic operations through a menu-driven interface. |
 | 3 | Tic-Tac-Toe Game | `ticTacToe.cpp` | Play a two-player console version of Tic-Tac-Toe. |
+| 4 | To-Do List | `todoList.cpp` | Organize tasks in a polished terminal dashboard. |
 
 ### 1. Number Guessing Game
 
@@ -49,6 +50,19 @@ A two-player terminal game using `X` and `O` on a 3 x 3 board.
 - Option to play again
 - Colourful terminal board
 
+### 4. To-Do List
+
+A polished terminal task manager with a dashboard-style interface and local task persistence.
+
+**Features**
+
+- Create, view, search, and delete tasks
+- Mark tasks as complete
+- Low, medium, and high priority labels
+- Task categories and a live productivity snapshot
+- Saved task data between program runs
+- Input validation and a colourful terminal UI
+
 ## Requirements
 
 - A C++ compiler such as `g++`
@@ -71,6 +85,10 @@ g++ -std=c++17 calculator.cpp -o calculator
 # Tic-Tac-Toe Game
 g++ -std=c++17 ticTacToe.cpp -o ticTacToe
 ./ticTacToe
+
+# To-Do List
+g++ -std=c++17 todoList.cpp -o todoList
+./todoList
 ```
 
 > Run `numberGame` from this repository folder so it can read and update `highscore.txt`.
@@ -83,6 +101,7 @@ CODSOFT/
 ├── highscore.txt       # Saved best score for Task 1
 ├── numberGame.cpp      # Task 1: Number Guessing Game
 ├── ticTacToe.cpp       # Task 3: Tic-Tac-Toe Game
+├── todoList.cpp        # Task 4: To-Do List
 ├── .gitignore          # Ignores compiled output files
 └── README.md
 ```
@@ -95,6 +114,7 @@ CODSOFT/
 - File handling
 - Random-number generation
 - Vectors, structures, and basic game logic
+- Persistent file storage and task-management logic
 
 ## Author
 
