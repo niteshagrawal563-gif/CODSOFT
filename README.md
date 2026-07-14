@@ -1,56 +1,105 @@
-# CODSOFT C++ Projects
+# CODSOFT C++ Programming Internship Projects
 
-This repository contains three console-based C++ projects.
+This repository contains three console-based C++ projects completed as part of the CodSoft C++ Programming Internship.
+
+Each project is independent and can be compiled and run from the terminal.
 
 ## Projects
 
-### 1. Simple Calculator
+| Task | Project | Source file | Description |
+| --- | --- | --- | --- |
+| 1 | Number Guessing Game | `numberGame.cpp` | Guess a randomly generated number from 1 to 100. |
+| 2 | Simple Calculator | `calculator.cpp` | Perform arithmetic operations through a menu-driven interface. |
+| 3 | Tic-Tac-Toe Game | `ticTacToe.cpp` | Play a two-player console version of Tic-Tac-Toe. |
 
-**File:** `calculator.cpp`
+### 1. Number Guessing Game
 
-A menu-driven calculator that supports addition, subtraction, multiplication, division, powers, square roots, and modulus. It validates numeric input and handles invalid operations such as division by zero.
+The computer selects a random number between 1 and 100. The player keeps guessing until the correct number is found.
 
-### 2. Number Guessing Game
+**Features**
 
-**File:** `numberGame.cpp`
+- Too high and too low feedback
+- A close-guess hint
+- Input validation
+- Attempt counter
+- Persistent best score stored in `highscore.txt`
 
-The computer chooses a random number from 1 to 100. Players receive high/low hints and try to guess it in the fewest attempts. The best score is stored in `highscore.txt`.
+### 2. Simple Calculator
 
-### 3. Tic-Tac-Toe
+A menu-driven calculator that accepts numeric input and displays the result of the selected operation.
 
-**File:** `ticTacToe.cpp`
+**Features**
 
-A two-player terminal Tic-Tac-Toe game. It checks valid moves, detects wins and draws, keeps a scoreboard, and lets players play multiple rounds.
+- Addition, subtraction, multiplication, and division
+- Power, square root, and modulus operations
+- Invalid-input handling
+- Protection against division or modulus by zero
+- Colourful terminal output
+
+### 3. Tic-Tac-Toe Game
+
+A two-player terminal game using `X` and `O` on a 3 x 3 board.
+
+**Features**
+
+- Player-name input
+- Valid-move checking
+- Win and draw detection
+- Scoreboard across multiple rounds
+- Option to play again
+- Colourful terminal board
 
 ## Requirements
 
-- A C++ compiler, such as `g++`
-- A terminal that supports ANSI colours (recommended)
+- A C++ compiler such as `g++`
+- C++17 support
+- A terminal with ANSI colour support is recommended
 
 ## Build and Run
 
-Compile and run each project separately from the repository folder:
+Open a terminal in this repository folder and compile one project at a time.
 
 ```bash
-# Calculator
-g++ -std=c++17 calculator.cpp -o calculator
-./calculator
-
 # Number Guessing Game
 g++ -std=c++17 numberGame.cpp -o numberGame
 ./numberGame
 
-# Tic-Tac-Toe
+# Simple Calculator
+g++ -std=c++17 calculator.cpp -o calculator
+./calculator
+
+# Tic-Tac-Toe Game
 g++ -std=c++17 ticTacToe.cpp -o ticTacToe
 ./ticTacToe
 ```
 
-## Files
+> Run `numberGame` from this repository folder so it can read and update `highscore.txt`.
 
-| File | Purpose |
-| --- | --- |
-| `calculator.cpp` | Calculator source code |
-| `numberGame.cpp` | Number Guessing Game source code |
-| `ticTacToe.cpp` | Tic-Tac-Toe source code |
-| `highscore.txt` | Saved best score for the Number Guessing Game |
+## Repository Structure
 
+```text
+CODSOFT/
+├── calculator.cpp      # Task 2: Simple Calculator
+├── highscore.txt       # Saved best score for Task 1
+├── numberGame.cpp      # Task 1: Number Guessing Game
+├── ticTacToe.cpp       # Task 3: Tic-Tac-Toe Game
+├── .gitignore          # Ignores compiled output files
+└── README.md
+```
+
+## Concepts Used
+
+- C++ functions and control flow
+- Loops and conditional statements
+- Input validation
+- File handling
+- Random-number generation
+- Vectors, structures, and basic game logic
+
+## Author
+
+Nitesh Agrawal
+
+## Internship
+
+CodSoft C++ Programming Internship
