@@ -21,9 +21,7 @@ void saveHighScore(int score) {
 }
 
 void playGame() {
-    srand(time(0));
-
-    int secret = rand() % 100 + 1;
+    int secret = rand() % 500 + 1;
     int guess;
     int attempts = 0;
 
@@ -32,7 +30,7 @@ void playGame() {
     cout << "\n=====================================\n";
     cout << "      NUMBER GUESSING GAME\n";
     cout << "=====================================\n";
-    cout << "I have chosen a number between 1 and 100.\n";
+    cout << "I have chosen a number between 1 and 500.\n";
     cout << "Try to guess it!\n\n";
 
     while (true) {
@@ -106,6 +104,7 @@ void showHighScore() {
 int main() {
 
     int choice;
+    srand(static_cast<unsigned int>(time(0)));
 
     while (true) {
 
@@ -118,6 +117,13 @@ int main() {
 
         cout << "Enter choice: ";
         cin >> choice;
+
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Invalid input! Please enter a number from 1 to 4.\n";
+            continue;
+        }
 
         switch (choice) {
 

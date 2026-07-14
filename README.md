@@ -8,13 +8,13 @@ Each project is independent and can be compiled and run from the terminal.
 
 | Task | Project | Source file | Description |
 | --- | --- | --- | --- |
-| 1 | Number Guessing Game | `numberGame.cpp` | Guess a randomly generated number from 1 to 100. |
+| 1 | Number Guessing Game | `numberGame.cpp` | Guess a randomly generated number from 1 to 500. |
 | 2 | Simple Calculator | `calculator.cpp` | Perform arithmetic operations through a menu-driven interface. |
 | 3 | Tic-Tac-Toe Game | `ticTacToe.cpp` | Play a two-player console version of Tic-Tac-Toe. |
 
 ### 1. Number Guessing Game
 
-The computer selects a random number between 1 and 100. The player keeps guessing until the correct number is found.
+The computer selects a random number between 1 and 500. The player keeps guessing until the correct number is found.
 
 **Features**
 
