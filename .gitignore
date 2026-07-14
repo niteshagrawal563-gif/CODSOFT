@@ -2,3 +2,10 @@ a.out
 *.o
 *.exe
 todo_tasks.txt
+librarySystem
+library_books.txt
+library_members.txt
+library_transactions.txt
+library_reservations.txt
+library_audit.log
+*.csv

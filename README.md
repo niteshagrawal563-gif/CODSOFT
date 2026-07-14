@@ -1,125 +1,177 @@
-# CODSOFT C++ Programming Internship Projects
+# CodSoft C++ Programming Internship Projects
 
-This repository contains three console-based C++ projects completed as part of the CodSoft C++ Programming Internship.
+[![C++ Standard](https://img.shields.io/badge/C%2B%2B-17-blue.svg?style=flat&logo=c%2B%2B)](https://en.cppreference.com/w/cpp/17)
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Unix-lightgrey.svg?style=flat)](#requirements)
+[![Environment](https://img.shields.io/badge/Console-ANSI%20Color-green.svg?style=flat)](#visual-aesthetics--terminal-styling)
+[![Status](https://img.shields.io/badge/Status-Completed-success.svg?style=flat)](#projects)
 
-Each project is independent and can be compiled and run from the terminal.
+A comprehensive suite of five standalone, console-based C++ applications developed during the **CodSoft C++ Programming Internship**. These applications demonstrate advanced software engineering practices, custom visual frameworks, complex data structures, and persistent storage management inside raw terminal interfaces.
 
-## Projects
+---
 
-| Task | Project | Source file | Description |
-| --- | --- | --- | --- |
-| 1 | Number Guessing Game | `numberGame.cpp` | Guess a randomly generated number from 1 to 500. |
-| 2 | Simple Calculator | `calculator.cpp` | Perform arithmetic operations through a menu-driven interface. |
-| 3 | Tic-Tac-Toe Game | `ticTacToe.cpp` | Play a two-player console version of Tic-Tac-Toe. |
-| 4 | To-Do List | `todoList.cpp` | Organize tasks in a polished terminal dashboard. |
+## Table of Contents
+- [Executive Project Overview](#executive-project-overview)
+- [Project Showcase](#project-showcase)
+  - [1. Number Guessing Game](#1-number-guessing-game)
+  - [2. Simple Calculator](#2-simple-calculator)
+  - [3. Tic-Tac-Toe Game](#3-tic-tac-toe-game)
+  - [4. To-Do List Dashboard](#4-to-do-list-dashboard)
+  - [5. Next-Gen Library Management System](#5-next-gen-library-management-system)
+- [Visual Aesthetics & Terminal Styling](#visual-aesthetics--terminal-styling)
+- [Software Engineering Patterns Applied](#software-engineering-patterns-applied)
+- [Prerequisites & Build Instructions](#prerequisites--build-instructions)
+- [Directory Layout](#directory-layout)
+- [Licensing & Author](#licensing--author)
+
+---
+
+## Executive Project Overview
+
+Each program is an independent tool compiled with a modern standard toolchain (`g++ -std=c++17`). Together, they showcase the journey from introductory procedural design to sophisticated, industry-grade commercial CLI software.
+
+| Task ID | Application | Source File | Core Capabilities |
+| :---: | :--- | :--- | :--- |
+| **01** | **Number Guessing Game** | `numberGame.cpp` | Randomization, persistent local high scores, close-proximity hints. |
+| **02** | **Simple Calculator** | `calculator.cpp` | Multi-functional arithmetic, trigonometric/power operations, division protection. |
+| **03** | **Tic-Tac-Toe Game** | `ticTacToe.cpp` | Multi-round scoreboard tracking, dynamic grid coloring, victory pattern matching. |
+| **04** | **To-Do List Dashboard** | `todoList.cpp` | Categorization, priorities, snapshot analytics, flat-file serialization. |
+| **05** | **Library Management System** | `librarySystem.cpp` | Role-Based Access Control, time travel simulation, reservation queues, log auditing. |
+
+---
+
+## Project Showcase
 
 ### 1. Number Guessing Game
-
-The computer selects a random number between 1 and 500. The player keeps guessing until the correct number is found.
-
-**Features**
-
-- Too high and too low feedback
-- A close-guess hint
-- Input validation
-- Attempt counter
-- Persistent best score stored in `highscore.txt`
+An interactive, feedback-driven game where the user attempts to guess a randomly chosen integer.
+*   **Intelligent Proximity Hints**: Warns the player when they are within 5 units of the secret number ("You're very close! 🔥").
+*   **High Score Tracking**: Automatically writes and reads the best score (fewest attempts) from a local `highscore.txt` database.
+*   **Robust Input Parsing**: Handles malformed scanner queries (e.g. typing text instead of digits) to avoid terminal loop locks.
 
 ### 2. Simple Calculator
-
-A menu-driven calculator that accepts numeric input and displays the result of the selected operation.
-
-**Features**
-
-- Addition, subtraction, multiplication, and division
-- Power, square root, and modulus operations
-- Invalid-input handling
-- Protection against division or modulus by zero
-- Colourful terminal output
+A menu-driven calculations utility optimized for basic and scientific arithmetic.
+*   **Extensive Operator Library**: Addition, subtraction, multiplication, division, exponentiation (`pow`), square roots (`sqrt`), and real modulus (`fmod`).
+*   **Zero-Division Guard**: Protects against program faults by intercepting divisions and moduli using `0` as a denominator.
+*   **Continuous Calculation**: Menu loop structure remains active, enabling back-to-back mathematical operations.
 
 ### 3. Tic-Tac-Toe Game
+A colorful, multi-round, local multiplayer board game.
+*   **Interactive Scoreboard**: Retains wins, losses, and draw metrics dynamically across multiple games.
+*   **ANSI Cell Coloring**: Custom cell renderer outputs distinct colored representations for Player X (Red) and Player O (Blue).
+*   **Win Pattern Checker**: Evaluates board conditions against an index of all 8 possible winning linear combinations.
 
-A two-player terminal game using `X` and `O` on a 3 x 3 board.
+### 4. To-Do List Dashboard
+A modern task-management workspace built around a live productivity dashboard.
+*   **Live Metrics Panel**: Displays total, pending, completed, and critical-priority statistics.
+*   **Advanced Metadata**: Tracks tasks by name, custom categories (e.g., Work, Personal, Study), and three priority levels (Low, Medium, High).
+*   **Fuzzy Searching**: Fast substring search by task content or category category.
+*   **Flat-File Serialization**: Saves tasks to `todo_tasks.txt` in a safe delimited format.
 
-**Features**
+### 5. Next-Gen Library Management System
+An industry-grade commercial-quality administrative and client portal.
+*   **Role-Based Access Control (RBAC)**: Supports administrative Librarian accounts and student Member accounts with different terminal pathways.
+*   **Security Shell**: Utilizes Unix `termios` configuration to capture masked passwords (`*` symbols) during authentication.
+*   **Dynamic Time Travel Engine**: A simulated clock allowing administrators to fast-forward the system time by any number of days, enabling dynamic overdue fine assessments ($0.50/day) and borrow limitations to be verified immediately.
+*   **Reservation Holds Queue**: Auto-blocks checked-out books when stock is 0, placing members in a reservation queue. The book is reserved for them upon check-in.
+*   **Audit Logging**: Appends all database operations, logins, and overrides to `library_audit.log` with formatted timestamps.
+*   **Data Exporter**: Compile and output databases directly to `books_report.csv` and `members_report.csv` standard formats.
 
-- Player-name input
-- Valid-move checking
-- Win and draw detection
-- Scoreboard across multiple rounds
-- Option to play again
-- Colourful terminal board
+---
 
-### 4. To-Do List
+## Visual Aesthetics & Terminal Styling
 
-A polished terminal task manager with a dashboard-style interface and local task persistence.
+The projects utilize a unified, color-coded visual language using ANSI escape sequences. A custom styling namespace `Style` is used across applications to maintain high contrast and interface accessibility:
 
-**Features**
-
-- Create, view, search, and delete tasks
-- Mark tasks as complete
-- Low, medium, and high priority labels
-- Task categories and a live productivity snapshot
-- Saved task data between program runs
-- Input validation and a colourful terminal UI
-
-## Requirements
-
-- A C++ compiler such as `g++`
-- C++17 support
-- A terminal with ANSI colour support is recommended
-
-## Build and Run
-
-Open a terminal in this repository folder and compile one project at a time.
-
-```bash
-# Number Guessing Game
-g++ -std=c++17 numberGame.cpp -o numberGame
-./numberGame
-
-# Simple Calculator
-g++ -std=c++17 calculator.cpp -o calculator
-./calculator
-
-# Tic-Tac-Toe Game
-g++ -std=c++17 ticTacToe.cpp -o ticTacToe
-./ticTacToe
-
-# To-Do List
-g++ -std=c++17 todoList.cpp -o todoList
-./todoList
+```cpp
+namespace Style {
+    const string reset   = "\033[0m";
+    const string bold    = "\033[1m";
+    const string dim     = "\033[2m";
+    const string red     = "\033[31m";
+    const string green   = "\033[32m";
+    const string yellow  = "\033[33m";
+    const string blue    = "\033[34m";
+    const string cyan    = "\033[36m";
+    const string magenta = "\033[35m";
+}
 ```
 
-> Run `numberGame` from this repository folder so it can read and update `highscore.txt`.
+UI borders are rendered using double-lined block borders (`╔`, `═`, `╗`, `║`, `╚`, `╝`) for an elegant, box-panel visual style.
 
-## Repository Structure
+---
+
+## Software Engineering Patterns Applied
+
+1.  **Robust Input Validation**: Avoids infinite loops by clearing input buffers (`cin.clear()` and `cin.ignore(10000, '\n')`) when user entries do not match expected types.
+2.  **Delimited File Serialization**: Formats complex records into structured database flat files using the pipe operator (`|`). A custom parser splits fields safely and handles legacy/corrupt records gracefully.
+3.  **Encapsulation**: Keeps business logic isolated from interface components, permitting easily editable menus and panels.
+
+---
+
+## Prerequisites & Build Instructions
+
+### Prerequisites
+*   A compiler supporting **C++17** or higher (e.g., `g++` 8.0+ or Clang).
+*   A terminal with ANSI escape sequences enabled for color display.
+
+### Compilation
+Open a terminal in the root repository and compile any desired application:
+
+```bash
+# 1. Number Guessing Game
+g++ -std=c++17 numberGame.cpp -o numberGame
+
+# 2. Simple Calculator
+g++ -std=c++17 calculator.cpp -o calculator
+
+# 3. Tic-Tac-Toe Game
+g++ -std=c++17 ticTacToe.cpp -o ticTacToe
+
+# 4. To-Do List Dashboard
+g++ -std=c++17 todoList.cpp -o todoList
+
+# 5. Library Management System
+g++ -std=c++17 librarySystem.cpp -o librarySystem
+```
+
+### Execution
+Run the compiled binaries directly from the terminal:
+```bash
+./numberGame
+./calculator
+./ticTacToe
+./todoList
+./librarySystem
+```
+
+> **Note on Task 5 testing**:
+> *   *Default Librarian Credentials*: Username: `admin` | Password: `admin123`
+> *   *Default Member Credentials*: Username: `1001` | Password: `member123`
+
+---
+
+## Directory Layout
 
 ```text
 CODSOFT/
-├── calculator.cpp      # Task 2: Simple Calculator
-├── highscore.txt       # Saved best score for Task 1
-├── numberGame.cpp      # Task 1: Number Guessing Game
-├── ticTacToe.cpp       # Task 3: Tic-Tac-Toe Game
-├── todoList.cpp        # Task 4: To-Do List
-├── .gitignore          # Ignores compiled output files
-└── README.md
+├── calculator.cpp            # Task 2: Simple Calculator application source
+├── numberGame.cpp            # Task 1: Number Guessing Game source
+├── ticTacToe.cpp             # Task 3: Tic-Tac-Toe Game source
+├── todoList.cpp              # Task 4: To-Do List Dashboard source
+├── librarySystem.cpp         # Task 5: Next-Gen Library Management System source
+├── highscore.txt             # Saved high-score tracker for Task 1
+├── library_books.txt         # Inventory database for Library System (Task 5)
+├── library_members.txt       # Users database for Library System (Task 5)
+├── library_transactions.txt  # Lending database for Library System (Task 5)
+├── library_reservations.txt  # Reservation holds database for Library System (Task 5)
+├── library_audit.log         # Security audit log trail for Library System (Task 5)
+├── .gitignore                # Rules for excluding compiled executables & logs
+└── README.md                 # Project handbook & styling systems details
 ```
 
-## Concepts Used
+---
 
-- C++ functions and control flow
-- Loops and conditional statements
-- Input validation
-- File handling
-- Random-number generation
-- Vectors, structures, and basic game logic
-- Persistent file storage and task-management logic
+## Licensing & Author
 
-## Author
-
-Nitesh Agrawal
-
-## Internship
-
-CodSoft C++ Programming Internship
+*   **Author**: Nitesh Agrawal
+*   **Organization**: CodSoft C++ Programming Internship
+*   **License**: Open-source MIT guidelines.
